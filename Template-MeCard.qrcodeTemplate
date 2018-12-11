@@ -1,0 +1,11 @@
+#HomeletQRCodeTemplate-MeCard-V1.0#
+--breakSign--
+["MeCard", "Enter your Information", "MECARD"]
+{<"Name", "N"><><"#IF#", "NAME">}
+{<"Phone Number", "TEL"><><"#IF#", "PHONE_NUMBER">}
+{<"URL", "URL"><><"#IF#", "URL">}
+{<"E-Mail", "EMAIL"><><"#IF#", "EMAIL">}
+{<"Note", "NOTE"><><"#IF#", "NOTE">}
+{<"Address", "ADR"><><"#IF#", "FORMATED_ADDRESS">}
+{<"Organization", "ORG"><><"#IF#", "ORGANIZATION">}
+{<"Job Title", "TIL"><><"#IF#", "JOB_TITLE">}

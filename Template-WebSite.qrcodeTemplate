@@ -1,0 +1,4 @@
+#HomeletQRCodeTemplate-URL-V1.0#
+--breakSign--
+["URL", "Enter your URL\nif want to input any non HTTP protocol WebSite please select #NON-HTTP# label and followed by a full URL with your custom protocol", "*"]
+{<"URL"><"#CB#", "HTTP Protocol", "http://", "Non-HTTP Protocol", "#NON-HTTP#"><"#IF#", "(ex:www.google.com;myprotocal://www.mywebsite.com)">}

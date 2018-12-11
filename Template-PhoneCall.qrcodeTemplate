@@ -1,0 +1,4 @@
+#HomeletQRCodeTemplate-PhoneCall-V1.0#
+--breakSign--
+["Phone Call", "Enter the Phone Number", "tel"]
+{<"Phone Number"><><"#IF#", "(ex:188 8888 8888;+86 16666666666;08612345678901)">}

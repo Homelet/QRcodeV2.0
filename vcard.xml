@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2018 Homelet Wei
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vCard>
+    <version version-rep="2.1">
+        <option ID="Name" mustContain="true">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Name</description>
+                <value>N</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="MULTIPLE_INPUTFIELDS">
+                <description>The Name of the Object associated with this vCard</description>
+                <values>
+                    <value>Vocative</value>
+                    <value>First Name</value>
+                    <value>Middle Name</value>
+                    <value>Last Name</value>
+                </values>
+                <help>Fill in '*' in unwanted fields</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Address" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Address</description>
+                <value>ADR</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="HOME">Home</value>
+                    <value value="WORK">Work</value>
+                    <value value="*">OTHER</value>
+                </values>
+            </itemTwo>
+            <itemThree class="MULTIPLE_INPUTFIELDS">
+                <description>A structured representation of the Mailing address for this vCard</description>
+                <values>
+                    <value>Street</value>
+                    <value>City</value>
+                    <value>State</value>
+                    <value>Zip code</value>
+                    <value>Country</value>
+                </values>
+                <help>Fill in '*' in unwanted fields</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Birthday" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Birthday</description>
+                <value>BDAY</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="DATE_CHOOSER">
+                <description>The Date of birth of the individual associated with this vCard</description>
+                <mode>BEFORE_TODAY</mode>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Categories" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Categories</description>
+                <value>CATEGORIES</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>A list of tags that can be used to describe the object represented by this vCard
+                </description>
+                <value>Coder;Biker</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="E-Mail" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>E-Mail</description>
+                <value>EMAIL</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="HOME">Home</value>
+                    <value value="WORK">Work</value>
+                    <value value="*">OTHER</value>
+                </values>
+            </itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="EMAIL">
+                <description>The address for Electronic Mail Communication with this vCard</description>
+                <value>example@gmail.com</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Note" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Note</description>
+                <value>NOTE</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Specific supplemental informations or comments that are associated with this vCard
+                </description>
+                <value>Company Profile</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Organization" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Organization</description>
+                <value>ORG</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>The name and optionally the unit(s) of the organization associated with this vCard object
+                </description>
+                <value>Google;GMail Team;Spam Detection Squad</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Job Title" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Job Title</description>
+                <value>TITLE</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Specifies the job title, functional position or function of the individual associated with
+                    the vCard object within an organization
+                </description>
+                <value>Software Engineer</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Phone Number" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Phone Number</description>
+                <value>TEL</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="CELL">Cellphone</value>
+                    <value value="HOME">Homephone</value>
+                    <value value="WORK">Workphone</value>
+                    <value value="FAX">Fax</value>
+                    <value value="PAGER">Pager</value>
+                    <value value="CALLBACK">CallBack</value>
+                    <value value="*">Other</value>
+                </values>
+            </itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="PHONE_NUMBER">
+                <description>The canonical number string for a telephone number for telephony communication with the
+                    vCard object
+                </description>
+                <value>+1(234)567-8910</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="URL" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>URL</description>
+                <value>URL</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="WEBSITE">
+                <description>A URL pointing to a website that is associated with this vCard object</description>
+                <value>http://www.google.com</value>
+            </itemThree>
+        </option>
+    </version>
+    <version version-rep="3.0">
+        <option ID="Name" mustContain="true">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Name</description>
+                <value>N</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="MULTIPLE_INPUTFIELDS">
+                <description>The Name of the Object associated with this vCard</description>
+                <values>
+                    <value>Vocative</value>
+                    <value>First Name</value>
+                    <value>Middle Name</value>
+                    <value>Last Name</value>
+                </values>
+                <help>Fill in '*' in unwanted fields</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Address" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Address</description>
+                <value>ADR</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="HOME">Home</value>
+                    <value value="WORK">Work</value>
+                    <value value="*">OTHER</value>
+                </values>
+            </itemTwo>
+            <itemThree class="MULTIPLE_INPUTFIELDS">
+                <description>A structured representation of the Mailing address for this vCard</description>
+                <values>
+                    <value>Street</value>
+                    <value>City</value>
+                    <value>State</value>
+                    <value>Zip code</value>
+                    <value>Country</value>
+                </values>
+                <help>Fill in '*' in unwanted fields</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Birthday" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Birthday</description>
+                <value>BDAY</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="DATE_CHOOSER">
+                <description>The Date of birth of the individual associated with this vCard</description>
+                <mode>BEFORE_TODAY</mode>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Categories" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Categories</description>
+                <value>CATEGORIES</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>A list of tags that can be used to describe the object represented by this vCard
+                </description>
+                <value>Coder;Biker</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Information sensitivity" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Information sensitivity</description>
+                <value>CLASS</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="COMBO_BOX">
+                <values>
+                    <value value="PUBLIC">Public</value>
+                    <value value="PRIVATE">Private</value>
+                    <help>Describe how sensitivity the information contains in this vCard is</help>
+                </values>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="E-Mail" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>E-Mail</description>
+                <value>EMAIL</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="HOME">Home</value>
+                    <value value="WORK">Work</value>
+                    <value value="*">OTHER</value>
+                </values>
+            </itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="EMAIL">
+                <description>The address for Electronic Mail Communication with this vCard</description>
+                <value>example@gmail.com</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="NickName" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>NickName</description>
+                <value>NICKNAME</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>One or more descriptive or familiar names for the object represented by this vCard
+                </description>
+                <value>Joe</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Note" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Note</description>
+                <value>NOTE</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Specific supplemental informations or comments that are associated with this vCard
+                </description>
+                <value>Company Profile</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Organization" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Organization</description>
+                <value>ORG</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>The name and optionally the unit(s) of the organization associated with this vCard object
+                </description>
+                <value>Google;GMail Team;Spam Detection Squad</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Job Title" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Job Title</description>
+                <value>TITLE</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Specifies the job title, functional position or function of the individual associated with
+                    the vCard object within an organization
+                </description>
+                <value>Software Engineer</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Phone Number" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Phone Number</description>
+                <value>TEL</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="CELL">Cellphone</value>
+                    <value value="HOME">Homephone</value>
+                    <value value="WORK">Workphone</value>
+                    <value value="FAX">Fax</value>
+                    <value value="PAGER">Pager</value>
+                    <value value="CALLBACK">CallBack</value>
+                    <value value="*">Other</value>
+                </values>
+            </itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="PHONE_NUMBER">
+                <description>The canonical number string for a telephone number for telephony communication with the
+                    vCard object
+                </description>
+                <value>+1(234)567-8910</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="URL" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>URL</description>
+                <value>URL</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="WEBSITE">
+                <description>A URL pointing to a website that is associated with this vCard object</description>
+                <value>http://www.google.com</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Skype" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Skype</description>
+                <value>X-SKYPE-USERNAME</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Skype UserName</description>
+                <value>Skype UserName</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Yahoo" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Yahoo</description>
+                <value>X-YAHOO</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Yahoo Account ID</description>
+                <value>Yahoo Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="AIM" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>AIM</description>
+                <value>X-AIM</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>AIM Account ID</description>
+                <value>AIM Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="QQ" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>QQ</description>
+                <value>X-QQ</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>QQ Account ID</description>
+                <value>QQ Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="WeChat" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>WeChat</description>
+                <value>X-WECHAT</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>WeChat Account ID</description>
+                <value>WeChat Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="WhatsApp" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>WhatsApp</description>
+                <value>X-WHATSAPP</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>WhatsApp Account ID</description>
+                <value>WhatsApp Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Jabber" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Jabber</description>
+                <value>X-JABBER</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Jabber Account ID</description>
+                <value>Jabber Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Windows Live" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Windows Live</description>
+                <value>X-MSN</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Windows Live Account ID</description>
+                <value>Windows Live Account ID</value>
+            </itemThree>
+        </option>
+    </version>
+    <version version-rep="4.0">
+        <!--div-->
+        <option ID="Name" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Name</description>
+                <value>N</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="MULTIPLE_INPUTFIELDS">
+                <description>The Name of the Object associated with this vCard</description>
+                <values>
+                    <value>Vocative</value>
+                    <value>First Name</value>
+                    <value>Middle Name</value>
+                    <value>Last Name</value>
+                </values>
+                <help>Fill in '*' in unwanted fields</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Address" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Address</description>
+                <value>ADR</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="HOME">Home</value>
+                    <value value="WORK">Work</value>
+                    <value value="*">OTHER</value>
+                </values>
+            </itemTwo>
+            <itemThree class="MULTIPLE_INPUTFIELDS">
+                <description>A structured representation of the Mailing address for this vCard</description>
+                <values>
+                    <value>Street</value>
+                    <value>City</value>
+                    <value>State</value>
+                    <value>Zip code</value>
+                    <value>Country</value>
+                </values>
+                <help>Fill in '*' in unwanted fields</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Anniversary" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Anniversary</description>
+                <value>ANNIVERSARY</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="DATE_CHOOSER">
+                <description>Defines the anniversary of the Object which owns this vCard</description>
+                <mode>NO_SEPCIFIC</mode>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Birthday" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Birthday</description>
+                <value>BDAY</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="DATE_CHOOSER">
+                <description>The Date of birth of the individual associated with this vCard</description>
+                <mode>BEFORE_TODAY</mode>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Categories" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Categories</description>
+                <value>CATEGORIES</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>A list of tags that can be used to describe the object represented by this vCard
+                </description>
+                <value>Coder;Biker</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="E-Mail" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>E-Mail</description>
+                <value>EMAIL</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="HOME">Home</value>
+                    <value value="WORK">Work</value>
+                    <value value="*">OTHER</value>
+                </values>
+            </itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="EMAIL">
+                <description>The address for Electronic Mail Communication with this vCard</description>
+                <value>example@gmail.com</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Gender" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Gender</description>
+                <value>GENDER</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="COMBO_BOX">
+                <values>
+                    <value value="M">Male</value>
+                    <value value="F">Female</value>
+                    <help>Defines the the gender of the person which owns this vCard</help>
+                </values>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Kind" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Kind</description>
+                <value>KIND</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>This attribute defines where, what or who owns this vCard, For Example: application,
+                    individual, group, location, organization
+                </description>
+                <value>individual</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Language" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Language</description>
+                <value>LANG</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Defines the languages that the person speak</description>
+                <value>en-us;cn</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="NickName" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>NickName</description>
+                <value>NICKNAME</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>One or more descriptive or familiar names for the object represented by this vCard
+                </description>
+                <value>Joe</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Note" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Note</description>
+                <value>NOTE</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Specific supplemental informations or comments that are associated with this vCard
+                </description>
+                <value>Company Profile</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Organization" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Organization</description>
+                <value>ORG</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>The name and optionally the unit(s) of the organization associated with this vCard object
+                </description>
+                <value>Google;GMail Team;Spam Detection Squad</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Job Title" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Job Title</description>
+                <value>TITLE</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Specifies the job title, functional position or function of the individual associated with
+                    the vCard object within an organization
+                </description>
+                <value>Software Engineer</value>
+                <help>Use ';' to separate</help>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Phone Number" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Phone Number</description>
+                <value>TEL</value>
+            </itemOne>
+            <itemTwo class="COMBO_BOX">
+                <values>
+                    <value value="CELL">Cellphone</value>
+                    <value value="HOME">Homephone</value>
+                    <value value="WORK">Workphone</value>
+                    <value value="FAX">Fax</value>
+                    <value value="PAGER">Pager</value>
+                    <value value="CALLBACK">CallBack</value>
+                    <value value="*">Other</value>
+                </values>
+            </itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="PHONE_NUMBER">
+                <description>The canonical number string for a telephone number for telephony communication with the
+                    vCard object
+                </description>
+                <value>+1(234)567-8910</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="URL" mustContain="false">
+            <holdLimit>1</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>URL</description>
+                <value>URL</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD" checker-class="WEBSITE">
+                <description>A URL pointing to a website that is associated with this vCard object</description>
+                <value>http://www.google.com</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Skype" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Skype</description>
+                <value>X-SKYPE-USERNAME</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Skype UserName</description>
+                <value>Skype UserName</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Yahoo" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Yahoo</description>
+                <value>X-YAHOO</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Yahoo Account ID</description>
+                <value>Yahoo Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="AIM" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>AIM</description>
+                <value>X-AIM</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>AIM Account ID</description>
+                <value>AIM Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="QQ" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>QQ</description>
+                <value>X-QQ</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>QQ Account ID</description>
+                <value>QQ Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="WeChat" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>WeChat</description>
+                <value>X-WECHAT</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>WeChat Account ID</description>
+                <value>WeChat Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="WhatsApp" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>WhatsApp</description>
+                <value>X-WHATSAPP</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>WhatsApp Account ID</description>
+                <value>WhatsApp Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Jabber" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Jabber</description>
+                <value>X-JABBER</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Jabber Account ID</description>
+                <value>Jabber Account ID</value>
+            </itemThree>
+        </option>
+        <!--div-->
+        <option ID="Windows Live" mustContain="false">
+            <holdLimit>0</holdLimit>
+            <itemOne class="PAIN_LABEL">
+                <description>Windows Live</description>
+                <value>X-MSN</value>
+            </itemOne>
+            <itemTwo class="NULL"></itemTwo>
+            <itemThree class="INPUT_FIELD">
+                <description>Windows Live Account ID</description>
+                <value>Windows Live Account ID</value>
+            </itemThree>
+        </option>
+    </version>
+</vCard>

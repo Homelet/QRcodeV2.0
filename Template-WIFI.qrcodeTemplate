@@ -1,0 +1,6 @@
+#HomeletQRCodeTemplate-WI-FI-V1.0#
+--breakSign--
+["WI-FI", "Enter your WIFI...", "WIFI"]
+{<"Name", "S"><><"#IF#", "WIFI_NAME">}
+{<"WIFI Security", "T"><><"#CB#", "WPA/WPA2", "WPA", "WEP", "WEP", "No Password", "nopass">}
+{<"Password", "P"><><"#IF#", "WIFI_PASSWORD">}

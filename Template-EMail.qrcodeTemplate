@@ -1,0 +1,4 @@
+#HomeletQRCodeTemplate-EMAIL-V1.0#
+--breakSign--
+["E-Mail", "*"]
+{<"E-Mail"><><"#IF#", "The address for electronic mail communication", "(ex:example@gmail.com)">}

@@ -1,0 +1,62 @@
+#HomeletQRCodeTemplate-VCard-V1.0#
+--breakSign--
+["VERSION" "2.1"]
+{<"true", "1"> <"Name", "N"> <> <"#MIF#", "Enter the name of the person, place or thing associated with the vCard object", "First Name(Michael)", "Middle Name(Joseph)", "Last Name(Jackson)", "Title(Mr.)">}
+{<"false", "0"> <"Address", "ADR"> <"#CB#", "Home", "HOME", "Work", "WORK", "Other", "*"> <"#MIF#", "A structured representation of the physical delivery address for the vCard object", "Name Associate with this Address", "Company Or Institution", "Street(4073 4th Line)", "City(Inisfill, Cookstown)", "State(Ontario)", "Zip Code or Postal Code(L0L 1L0)", "Country(Canada)">}
+{<"false", "1"> <"Birthday", "BDAY"> <> <"#DC#", "#BEFORE_TODAY#", "Date of birth of the individual associated with the vCard">}
+{<"false", "1"> <"Categories", "CATEGORIES"> <> <"#IF#", "A list of tags that can be used to describe the object represented by this vCard", "(swimming;biking)(Use ';' to separate)">}
+{<"false", "0"> <"E-Mail", "EMAIL"> <"#CB#", "Home", "HOME", "Work", "WORK", "Other", "*"> <"#IF#", "The address for electronic mail communication with the vCard object", "(example@gmail.com)">}
+{<"false", "1"> <"Note", "NOTE"> <> <"#IF#", "Specifies supplemental information or a comment that is associated with the vCard", "(My hobby is Coding)">}
+{<"false", "1"> <"Organization", "ORG"> <> <"#IF#", "The name and optionally the unit(s) of the organization associated with the vCard object", "(Google;GMail Team;Spam Detection Squad)(Use ';' to separate)">}
+{<"false", "0"> <"Job Title", "TITLE"> <> <"#IF#", "Specifies the job title, functional position or function of the individual associated with the vCard object within an organization", "(Software Engineer)">}
+{<"false", "0"> <"Phone Number", "TEL"> <"#CB#", "CellPhone", "CELL", "HomePhone", "HOME", "WorkPhone", "WORK", "Fax", "FAX", "Pager", "PAGER", "CallBack", "CALLBACK", "Other", "*"> <"#IF#", "The canonical number string for a telephone number for telephony communication with the vCard object", "((123) 456-7890;123 4567 8901)">}
+{<"false", "0"> <"URL", "URL"> <> <"#IF#", "A URL pointing to a website that represents the person in some way", "(http://www.google.com)">}
+--breakSign--
+["VERSION" "3.0"]
+{<"true", "1"> <"Name", "N"> <> <"#MIF#","Enter the name of the person, place or thing associated with the vCard object", "First Name(Michael)", "Middle Name(Joseph)", "Last Name(Jackson)", "Title(Mr.)", "*">}
+{<"false", "0"> <"Address", "ADR"> <"#CB#", "Home", "HOME", "Work", "WORK", "Other", "*"> <"#MIF#", "A structured representation of the physical delivery address for the vCard object", "Name Associate with this Address", "Company Or Institution", "Street(4073 4th Line)", "City(Inisfill, Cookstown)", "State(Ontario)", "Zip Code or Postal Code(L0L 1L0)", "Country(Canada)">}
+{<"false", "1"> <"Birthday", "BDAY"> <> <"#DC#","#BEFORE_TODAY#", "Date of birth of the individual associated with the vCard">}
+{<"false", "1"> <"Categories", "CATEGORIES"> <> <"#IF#", "A list of tags that can be used to describe the object represented by this vCard", "(swimming;biking)(Use ';' to separate)">}
+{<"false", "1"> <"Information sensitivity", "CLASS"> <> <"#CB#", "Public", "public", "Private", "private">}
+{<"false", "0"> <"E-Mail", "EMAIL"> <"#CB#", "Home", "HOME", "Work", "WORK", "Other", "*"> <"#IF#", "The address for electronic mail communication with the vCard object", "(example@gmail.com)">}
+{<"false", "1"> <"NickName", "NICKNAME"> <> <"#IF#", "One or more descriptive/familiar names for the object represented by this vCard", "(Joe, Johnny)(Use ',' to seperate)">}
+{<"false", "1"> <"Note", "NOTE"> <> <"#IF#", "Specifies supplemental information or a comment that is associated with the vCard.", "(My hobby is Coding)">}
+{<"false", "1"> <"Organization", "ORG"> <> <"#IF#", "The name and optionally the unit(s) of the organization associated with the vCard object", "(Google;GMail Team;Spam Detection Squad)(Use ';' to separate)">}
+{<"false", "0"> <"Job Title", "TITLE"> <> <"#IF#", "Specifies the job title, functional position or function of the individual associated with the vCard object within an organization", "(Software Engineer)">}
+{<"false", "0"> <"Phone Number", "TEL"> <"#CB#", "CellPhone", "CELL", "HomePhone", "HOME", "WorkPhone", "WORK", "Fax", "FAX", "Pager", "PAGER", "CallBack", "CALLBACK", "Other", "*"> <"#IF#", "The canonical number string for a telephone number for telephony communication with the vCard object", "((123) 456-7890;123 4567 8901)">}
+{<"false", "0"> <"URL", "URL"> <> <"#IF#", "A URL pointing to a website that represents the person in some way", "(http://www.google.com)">}
+<!-----------------------------------div----------------------------------->
+{<"false", "0"> <"Skype", "X-SKYPE-USERNAME"> <> <"#IF#", "Enter Your Skype UserName...", "(Skype UserName)">}
+{<"false", "0"> <"Yahoo", "X-YAHOO"> <> <"#IF#", "Enter Your Yahoo Account ID...", "(Yahoo Account ID)">}
+{<"false", "0"> <"AIM", "X-AIM"> <> <"#IF#", "Enter Your AIM Account ID...", "(AIM Account ID)">}
+{<"false", "0"> <"QQ", "X-QQ"> <> <"#IF#", "Enter Your QQ ID...", "(QQ Account ID)">}
+{<"false", "0"> <"WeChat", "X-WECHAT"> <> <"#IF#", "Enter Your WeChat ID...", "(WeChat Account ID)">}
+{<"false", "0"> <"WhatsApp", "X-WHATSAPP"> <> <"#IF#", "Enter Your WhatsApp Account ID...", "(WhatsApp Account ID)">}
+{<"false", "0"> <"Jabber", "X-JABBER"> <> <"#IF#", "Enter Your Jabber Account ID...", "(Jabber Account ID)">}
+{<"false", "0"> <"Windows Live", "X-MSN"> <> <"#IF#", "Enter Your Windows Live Account ID...", "(Windows Live Account ID)">}
+<!-----------------------------------div----------------------------------->
+--breakSign--
+["VERSION" "4.0"]
+{<"false", "1"> <"Name", "N"> <> <"#MIF#","Enter the name of the person, place or thing associated with the vCard object", "First Name(Michael)", "Middle Name(Joseph)", "Last Name(Jackson)", "Title(Mr.)", "*">}
+{<"false", "0"> <"Address", "ADR"> <"#CB#", "Home", "HOME", "Work", "WORK", "Other", "*"> <"#MIF#", "A structured representation of the physical delivery address for the vCard object", "Name Associate with this Address", "Company Or Institution", "Street(4073 4th Line)", "City(Inisfill, Cookstown)", "State(Ontario)", "Zip Code or Postal Code(L0L 1L0)", "Country(Canada)">}
+{<"false", "0"> <"Anniversary", "ANNIVERSARY"> <> <"#DC#", "#NO_SEPCIFIC#", "Defines the Person who owns this vCard Object's anniversary">}
+{<"false", "1"> <"Birthday", "BDAY"> <> <"#DC#", "#BEFORE_TODAY#", "Date of birth of the individual associated with the vCard">}
+{<"false", "0"> <"Categories/Hobby", "CATEGORIES"> <> <"#IF#", "A list of tags that can be used to describe the object represented by this vCard.", "(swimming;biking)(Use ';' to separate)">}
+{<"false", "0"> <"E-Mail", "EMAIL"> <"#CB#", "Home", "HOME", "Work", "WORK", "Other", "*"> <"#IF#", "The address for electronic mail communication with the vCard object", "(example@gmail.com)">}
+{<"false", "1"> <"Gender", "GENDER"> <> <"#CB#", "Defines the person associate with this vCard Object's gender", "Female", "F", "Male", ""M>}
+{<"false", "1"> <"Kind", "KIND"> <> <"#IF#", "this Attrubute of vCard is open, For Example: some application, some individual, or some orgonization owns this vCard(application, individual, group, location, organization)", "(individual)">}
+{<"false", "1"> <"Language", "LANG"> <> <"#IF#", "Defines a language that the person speaks", "(EN-CA;FR-CA)(Use ';' to separate)">}
+{<"false", "1"> <"NickName", "NICKNAME"> <> <"#IF#", "One or more descriptive/familiar names for the object represented by this vCard", "(Joe)">}
+{<"false", "1"> <"Note", "NOTE"> <> <"#IF#", "Specifies supplemental information or a comment that is associated with the vCard", "(My hobby is Coding)">}
+{<"false", "1"> <"Organization", "ORG"> <> <"#IF#", "The name and optionally the unit(s) of the organization associated with the vCard object", "(Google;GMail Team;Spam Detection Squad)(Use ';' to separate)">}
+{<"false", "0"> <"Job Title", "TITLE"> <> <"#IF#", "Specifies the job title, functional position or function of the individual associated with the vCard object within an organization", "(Software Engineer)">}
+{<"false", "0"> <"Phone Number", "TEL"> <"#CB#", "CellPhone", "CELL", "HomePhone", "HOME", "WorkPhone", "WORK", "Fax", "FAX", "Pager", "PAGER", "CallBack", "CALLBACK", "Other", "*"> <"#IF#", "The canonical number string for a telephone number for telephony communication with the vCard object", "((123) 456-7890;123 4567 8901)">}
+{<"false", "0"> <"URL", "URL"> <> <"#IF#", "A URL pointing to a website that represents the person in some way", "(http://www.google.com)">}
+{<"false", "0"> <"Skype", "X-SKYPE-USERNAME"> <> <"#IF#", "Enter Your Skype Username...", "(Skype UserName)">}
+{<"false", "0"> <"Yahoo", "X-YAHOO"> <> <"#IF#", "Enter Your Yahoo Account ID...", "(Yahoo Account ID)">}
+{<"false", "0"> <"AIM", "X-AIM"> <> <"#IF#", "Enter Your AIM Account ID...", "(AIM Account ID)">}
+{<"false", "0"> <"QQ", "X-QQ"> <> <"#IF#", "Enter Your QQ ID...", "(QQ Account ID)">}
+{<"false", "0"> <"WeChat", "X-WECHAT"> <> <"#IF#", "Enter Your WeChat ID...", "(WeChat Account ID)">}
+{<"false", "0"> <"WhatsApp", "X-WHATSAPP"> <> <"#IF#", "Enter Your WhatsApp Account ID...", "(WhatsApp Account ID)">}
+{<"false", "0"> <"Jabber", "X-JABBER"> <> <"#IF#", "Enter Your Jabber Account ID...", "(Jabber Account ID)">}
+{<"false", "0"> <"Windows Live", "X-MSN"> <> <"#IF#", "Enter Your Windows Live Account ID...", "(Windows Live Account ID)">}

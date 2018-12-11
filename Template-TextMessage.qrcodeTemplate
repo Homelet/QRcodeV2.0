@@ -1,0 +1,5 @@
+#HomeletQRCodeTemplate-TextMessage-V1.0#
+--breakSign--
+["SMS", "Enter Your SMS...", "smsto"]
+{<"Phone Number"><><"#IF#", "(ex:188 8888 8888;+86 16666666666;08612345678901)">}
+{<"SMS Content"><><"#IF#", "SMS_CONTENT">}
